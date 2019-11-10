@@ -1,0 +1,379 @@
+@import './child_scss/base';
+@import './child_scss/head_footer';
+@import './child_scss/nav';
+
+.contents {
+  padding: 75px 0 100px;
+  background-image: url(../img/bk.png);
+  background-attachment: fixed;
+  > .inner {
+    margin: 0 auto;
+    width: 1000px;
+    .main {
+      &__title {
+        margin-bottom: 30px;
+        font-family: 'opensohko';
+        font-size: 54px;
+        text-align: center;
+        &__sub {
+          margin-bottom: 30px;
+          font-size: 24px;
+          text-align: center;
+        }
+        &__text {
+          margin-bottom: 100px;
+          font-size: 14px;
+          line-height: 2;
+          text-align:center;
+          > a {
+            text-decoration: underline;
+          }
+        }
+      }
+      &__footer {
+        text-align: center;
+      }
+    }
+  }
+  &__white {
+    background-color: #d8d8d8;
+    background-image: initial;
+    .main {
+      &__title {
+        margin-bottom: 50px;
+        font-size: 43px;
+      }
+    }
+  }
+  .icon_all { background-image: url(../img/design/icon/icon_all.png); }
+  .icon_facade { background-image: url(../img/design/icon/icon_facade.png); }
+  .icon_roof { background-image: url(../img/design/icon/icon_roof.png); }
+  .icon_wall { background-image: url(../img/design/icon/icon_wall.png); }
+  .icon_floor { background-image: url(../img/design/icon/icon_floor.png); }
+  .icon_window { background-image: url(../img/design/icon/icon_window.png); }
+  .icon_door { background-image: url(../img/design/icon/icon_door.png); }
+  .icon_stair { background-image: url(../img/design/icon/icon_stair.png); }
+  .icon_ramp { background-image: url(../img/design/icon/icon_ramp.png); }
+  .icon_shelf { background-image: url(../img/design/icon/icon_shelf.png); }
+  .icon_chair { background-image: url(../img/design/icon/icon_chair.png); }
+  .icon_table { background-image: url(../img/design/icon/icon_table.png); }
+  .icon_plant { background-image: url(../img/design/icon/icon_plant.png); }
+}
+
+.design {
+  &__sort {
+    &__nav {
+      position: relative;
+      margin-bottom: 30px;
+      &__items {
+        display: inline-block;
+        &:after {
+          content: '|';
+          display: inline-block;
+          padding-left: .3em;
+          padding-right: .3em;
+          font-family: 'read';
+        }
+        &.active {
+          color: #ffbf00;
+          :after {
+            color: #000;
+          }
+        }
+        &.inactive {
+          color: #aaa;
+          :after {
+            color: #000;
+          }
+        }
+      }
+      &__items:last-child :after {
+        content: none;
+      }
+      &__logo {
+        width: 80px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -20px;
+      }
+    }
+
+    &__products {
+      margin: -20px 0 100px -20px;
+      font-size: 0;
+      &__items {
+        position: relative;
+        display: inline-block;
+        margin: 20px 0 0 20px;
+        width: 320px;
+        vertical-align: top;
+        background-color: #fff;
+        box-sizing: border-box;
+        padding: 10px;
+
+        &__category {
+          margin: 3px 0 20px;
+          font-size: 13px;
+        }
+        &__name {
+          margin-bottom: 22px;
+          font-size: 17px;
+        }
+        &__maker {
+          margin-bottom: 3px;
+          font-size: 13px;
+        }
+        &__icon {
+          position: absolute;
+          top: 65%;
+          right: 10px;
+          width: 80px;
+          height: 40px;
+        }
+      }
+      &__items:hover {
+        padding: 8px;
+        border: 2px #000 solid;
+        .is-product {
+          top: 65%;
+          right: 8px;
+        }
+      }
+    }
+  }
+}
+
+.video {
+  position: relative;
+  &__player {
+    width: 100%;
+    height: 50%;
+  }
+  &__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    background-image: url(../img/video/video_play_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+}
+
+.posts {
+  &__items {
+    margin: 0 auto 20px;
+    width: 1000px;
+    font-size: 0;
+    text-align: center;
+    &__list {
+      display: inline-block;
+      padding: 10px;
+      width: 250px;
+      vertical-align: top;
+      box-sizing: border-box;
+      &__title {
+        padding: 3px 5px;
+        background-color: #000;
+        &__type {
+          float: left;
+          font-size: 16px;
+          letter-spacing: 1px;
+          color: #fff;
+          font-family: 'opensohko';
+        }
+        &__date {
+          float: right;
+          font-size: 16px;
+          letter-spacing: 1px;
+          color: #fff;
+          font-family: 'opensohko';
+        }
+      }
+      &__img {
+        width: 230px;
+        height: 140px;
+        background-size: cover;
+        &.post__img {
+          &__1 {
+            background-image: url(../img/posts/160212_p_002.jpg);
+          }
+          &__2 {
+            background-image: url(../img/posts/160212_p_001.jpg);
+          }
+          &__3 {
+            background-image: url(../img/posts/sohko-renovation-logo.jpg);
+          }
+        }
+      }
+      &__text {
+        height: 84px;
+        font-size: 14px;
+        text-align: left;
+        line-height: 2;
+      }
+    }
+    &__list:hover {
+      padding: 8px;
+      border: 2px #000 solid;
+      background-color: #d8d8d8;
+      .posts__items__list__title__type, .posts__items__list__title__date{
+         color: #ffbf00;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 641px) and (max-width: 1000px) {
+
+  .contents {
+    padding-left: 20px;
+    padding-right: 20px;
+    > .inner {
+      width: 100%;
+      height: auto;
+      .main__title {
+        font-size: 42px;
+        &__text {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+        &__sub {
+          font-size: 15px;
+        }
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .design__sort__products {
+    margin: -20px 0 100px -4%;
+    &__items {
+      margin: 20px 0 0 4%;
+      width: 46%;
+      &__icon {
+        top: 65%;
+      }
+    }
+    &__items:hover {
+      .design__sort__products__items__icon .is-product {
+        top: calc(65% + 1px);
+      }
+    }
+  }
+
+  .posts__items, .inner {
+    width: 95%;
+  }
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+  .inner {
+    width: 100%;
+  }
+
+  .contents {
+    padding: 20px 0;
+    > .inner {
+      width: 100%;
+      height: auto;
+      padding: 0 10px;
+      box-sizing: border-box;
+      img {
+        width: 100%;
+      }
+      .main {
+        &__title {
+          font-size: 32px;
+          margin-bottom: 20px;
+          &__sub {
+            font-size: 15px;
+            margin-bottom: 20px;
+          }
+          &__text {
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .posts {
+        font-size: 43px;
+      }
+    }
+  }
+
+  .design__sort{
+    &__nav {
+      padding-right: 90px;
+      &__items {
+        margin-top: 10px;
+      }
+    }
+    &__products {
+      margin: 0 0 20px 0;
+      &__items {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        &__img {
+          position: relative;
+          width: 100%;
+          > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: auto;
+          }
+        }
+        &__img:before {
+          content: "";
+          display: block;
+          padding-top: calc((2 / 3) * 100%);
+        }
+        &__icon {
+          top: 75%;
+        }
+      }
+      &__items:hover {
+        .design__sort__products__items__icon {
+          top: calc(75% + 1px);
+        }
+      }
+    }
+  }
+
+  .posts__items {
+    width: 100%;
+    &__list {
+      width: 100%;
+      + .posts__items__list {
+        margin-top: 10px;
+      }
+      &__img {
+        width: 100%;
+      }
+      &__text {
+        height: initial;
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,74 @@
+.visualBg {
+  @include tab {
+    height: 100vh;
+    min-height: 400px;
+  }
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  z-index: 1;
+  background: #fff;
+
+  > div {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out 0s;
+    z-index: 1;
+    &.is-view {
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+
+  .visual201810 {
+    @media (min-width: 600px) and (orientation: portrait) {
+      background: url(../img/visual201810_pc.jpg) no-repeat 0% 0%;
+      background-size: cover;
+    }
+    @include tab {
+      background: url(../img/visual201810_pc.jpg) no-repeat 50% 100%;
+      background-size: cover;
+    }
+    @include pc {
+      background: url(../img/visual201810_pc.jpg) no-repeat 50% 30%;
+      background-size: cover;
+    }
+    background: url(../img/visual201810_sp.jpg) no-repeat 10% 40%;
+    background-size: cover;
+    opacity: 0;
+  }
+  .visual201809 {
+    @include tab {
+      background: url(../img/visual201809_pc.jpg) no-repeat 30% 100%;
+      background-size: cover;
+    }
+    @include pc {
+      background: url(../img/visual201809_pc.jpg) no-repeat 20% 30%;
+      background-size: cover;
+    }
+    background: url(../img/visual201809_sp.jpg) no-repeat 0% 40%;
+    background-size: cover;
+    opacity: 0;
+  }
+  .visual-kazu {
+    @media (min-width: 450px) {
+      background: url(../img/visual_kazu_pc.jpg) no-repeat 80% 0%;
+      background-size: cover;
+    }
+    background: url(../img/visual_kazu_sp.jpg) no-repeat 50% 0%;
+    background-size: cover;
+    opacity: 0;
+  }
+  .visual03 {
+    background: url(../img/visual03.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    opacity: 0;
+  }
+}
